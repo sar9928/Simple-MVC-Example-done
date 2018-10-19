@@ -24,7 +24,7 @@ const DogSchema = new mongoose.Schema({
     breed: {
         type: String,
         required: true,
-        trim: false,
+        trim: true,
         unique: false,  
     },
     
