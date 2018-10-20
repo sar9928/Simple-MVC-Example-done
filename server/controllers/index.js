@@ -383,7 +383,9 @@ const updateLastDog = (req, res) => {
     const savePromise = lastDogAdded.save();
 
     // send back the name as a success for now
-    savePromise.then(() => res.json({ name: lastDogAdded.name, breed: lastDogAdded.breed, age: lastDogAdded.age }));
+    savePromise.then(() => res.json({ name: lastDogAdded.name, 
+                                     breed: lastDogAdded.breed, 
+                                     age: lastDogAdded.age }));
 
     // if save error, just return an error for now
     savePromise.catch((err) => res.json({ err }));
